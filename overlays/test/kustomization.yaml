@@ -15,4 +15,8 @@ patches:
       - op: replace
         path: /spec/template/spec/containers/0/resources/limits/cpu
         value: "60m"
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: 525158249545.dkr.ecr.us-west-2.amazonaws.com/sample-microservice:v2
+
 
