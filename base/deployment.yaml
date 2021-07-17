@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample
+spec:
+  selector:
+    matchLabels:
+      app: sample
+  template:
+    metadata:
+      labels:
+        app: sample
+    spec:
+      containers:
+      - name: sample
+        image: 525158249545.dkr.ecr.us-west-2.amazonaws.com/sample-microservice:latest
+        resources:
+          limits:
+            memory: "30Mi"
+            cpu: "50m"
+        ports:
+        - containerPort: 8080
+
+

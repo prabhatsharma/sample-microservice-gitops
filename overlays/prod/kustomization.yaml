@@ -1,0 +1,18 @@
+
+namespace: sample-prod
+
+resources:
+  - ../../base/
+
+patches:
+  - target:
+      kind: Deployment
+      name: sample
+    patch: |
+      - op: replace
+        path: /spec/template/spec/containers/0/resources/limits/memory
+        value: "70Mi"
+      - op: replace
+        path: /spec/template/spec/containers/0/resources/limits/cpu
+        value: "100m"
+
