@@ -1,5 +1,5 @@
 
-namespace: sample-prod
+namespace: sample-test
 
 resources:
   - ../../base/
