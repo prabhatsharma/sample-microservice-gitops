@@ -4,3 +4,13 @@ namespace: sample-dev
 resources:
   - ../../base/
 
+patches:
+  - target:
+      kind: Deployment
+      name: sample
+    patch: |
+      - op: replace
+        path: /spec/template/spec/containers/0/image
+        value: 525158249545.dkr.ecr.us-west-2.amazonaws.com/sample-microservice:v2
+
+
