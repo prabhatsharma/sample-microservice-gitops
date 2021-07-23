@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sample
+  labels:
+    name: sample
+spec:
+  rules:
+  - host: sample.i.prabhatsharma.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: sample
+            port: 
+              number: 8080
+
