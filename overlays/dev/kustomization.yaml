@@ -15,6 +15,14 @@ patches:
       - op: replace
         path: /spec/template/spec/containers/0/resources/limits/cpu
         value: "200m"
+  - target:
+      kind: Ingress
+      name: sample
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: sample-dev.i.prabhatsharma.com
+
 
 
 

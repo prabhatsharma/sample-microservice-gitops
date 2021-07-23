@@ -18,5 +18,11 @@ patches:
       - op: replace
         path: /spec/template/spec/containers/0/image
         value: 525158249545.dkr.ecr.us-west-2.amazonaws.com/sample-microservice:v2
-
+  - target:
+      kind: Ingress
+      name: sample
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: sample-test.i.prabhatsharma.com
 
